@@ -7,12 +7,13 @@
 #pragma once
 
 //---- Define your own ImVector<> type if you don't want to use the provided implementation defined in imgui.h
-//#include <vector>
-//#define ImVector  std::vector
+#include <vector>
+#define ImVector  std::vector
 //#define ImVector  MyVector
 
 //---- Define assertion handler. Defaults to calling assert().
-//#define IM_ASSERT(_EXPR)  MyAssert(_EXPR)
+#include <dbgtools_assert.h>
+#define IM_ASSERT(_EXPR)  ASSERT(_EXPR)
 
 //---- Don't implement default clipboard handlers for Windows (so as not to link with OpenClipboard() and others Win32 functions)
 //#define IMGUI_DISABLE_WIN32_DEFAULT_CLIPBOARD_FUNCS

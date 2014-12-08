@@ -1720,7 +1720,7 @@ static void LogText(const ImVec2& ref_pos, const char* text, const char* text_en
 
     const char* text_remaining = text;
     const int tree_depth = window->DC.TreeDepth;
-    while (true)
+    for (;;)
     {
         const char* line_end = text_remaining;
         while (line_end < text_end)
@@ -7239,7 +7239,7 @@ struct ExampleAppConsole
                 {
                     // Multiple matches. Complete as much as we can, so inputing "C" will complete to "CL" and display "CLEAR" and "CLASSIFY"
                     int match_len = (int)(word_end - word_start);
-                    while (true)
+                    for (;;)
                     {
                         int c = 0;
                         bool all_candidates_matches = true;
